@@ -15,15 +15,17 @@ $("#jokes").on("click", function (event) { //#jokes
     })
 })
 $("#gifs").on("click", function (event) { //#gifs
+
     event.preventDefault();
-    var gifURL = "https://api.giphy.com/v1/gifs/search?api_key="
-    var gifapi_key = "1sI8qnYSYJT3bcAJldPmGbL6gO1XMuOV"
-    var gifSearchParameters = "&q=jokes&limit=1&offset=0&rating=g&lang=en"
+    var gifURL = "https://api.giphy.com/v1/gifs/random?"
+    var gifapi_key = "api_key=1sI8qnYSYJT3bcAJldPmGbL6gO1XMuOV"
+    var gifSearchParameters = "&tag=laughing&rating=pg" //Need a laugh? Potentially update HTML
     $.ajax({
         url: gifURL + gifapi_key + gifSearchParameters,
         method: "GET"
     }).then(function (response) {
         console.log(response);
+        console.log(response.data.embed_url); 
     })
 })
 $("#quote").on("click", function (event) {
