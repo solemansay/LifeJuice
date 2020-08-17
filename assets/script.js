@@ -1,18 +1,20 @@
-$("#jokes").on("click", function(event) {
+$("#quote").on("click", function(event) { //#jokes
 event.preventDefault();
 
-var jokeURL = "https://official-joke-api.appspot.com/jokes/programming/random";
+var jokeURL = "https://official-joke-api.appspot.com/jokes/general/random";
 
 $.ajax({
 url: jokeURL,
 method: "GET"
     }).then(function(response) {
-      console.log(response);
+    console.log(response)
+    console.log(response[0].setup);
+    console.log(response[0].punchline);
     }) 
 })
 
 
-$("#gifs").on("click", function(event) {
+$("#laughs").on("click", function(event) { //#gifs
     event.preventDefault();
    
 var gifURL = "https://api.giphy.com/v1/gifs/search?api_key="
