@@ -1,4 +1,9 @@
-$("#quote").on("click", function(event) { //#jokes
+$("#laughs").on("click", function(){
+    $(".smile1").attr("class", "columns is-block !important");
+})
+
+
+$("#jokes").on("click", function(event) { //#jokes
 event.preventDefault();
 
 var jokeURL = "https://official-joke-api.appspot.com/jokes/general/random";
@@ -14,7 +19,7 @@ method: "GET"
 })
 
 
-$("#laughs").on("click", function(event) { //#gifs
+$("#gifs").on("click", function(event) { //#gifs
     event.preventDefault();
    
 var gifURL = "https://api.giphy.com/v1/gifs/search?api_key="
@@ -29,3 +34,16 @@ $.ajax({
       }) 
 })
 
+
+
+$("#quote").on("click", function(event) {
+  event.preventDefault();
+ 
+var quotesURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"
+$.ajax({
+url: quotesURL ,
+method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    }) 
+})
