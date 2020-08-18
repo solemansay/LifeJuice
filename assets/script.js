@@ -1,8 +1,6 @@
-$("#smile").on("click", function () {
-    $(".smile1").attr("class", "columns is-block !important");
-})
+var sippyArray = [jokes, gifs, quotes, facts]
 
-function jokes(){
+function jokes() {
     event.preventDefault();
     var jokeURL = "https://official-joke-api.appspot.com/jokes/general/random";
     $.ajax({
@@ -12,7 +10,7 @@ function jokes(){
         var newDiv = $("<div>");
         //var saveBtn = $("<button>").text("Save").attr("save");
         var jokeSetup = response[0].setup;
-        var jokePunch = response[0].punchline; 
+        var jokePunch = response[0].punchline;
 
         newDiv.text(jokeSetup + " " + jokePunch)
         $("#results").append(newDiv);
@@ -33,12 +31,12 @@ function gifs() {
     }).then(function (response) {
         var newImg = $("<img>");
         var gif = response.data.images.original.url
-        
-       newImg.attr("src", gif);
+
+        newImg.attr("src", gif);
         $("#results").append(newImg);
 
         console.log(response);
-      //  console.log(gif); 
+        //  console.log(gif); 
     })
 }
 function quotes() {
@@ -69,28 +67,25 @@ function facts() {
     })
 }
 
-var sippyArray = [jokes, gifs, quotes, facts]
-
 $("#sip").on("click", function (event) {
     event.preventDefault()
-    var sippy = Math.floor(Math.random()* 4)
+    var sippy = Math.floor(Math.random() * 4)
     console.log(sippy);
     sippyArray[sippy]()
 })
-
+$("#smile").on("click", function () {
+    $(".smile1").attr("class", "columns is-block !important");
+})
 $("#jokes").on("click", function (event) { //#jokes
-jokes();
+    jokes();
 })
-
 $("#gifs").on("click", function (event) { //#gifs
-gifs()
+    gifs()
 })
-
 $("#quote").on("click", function (event) {
-quotes()
+    quotes()
 })
-
 $("#fact").on("click", function (event) { //advice
-facts()
+    facts()
 })
 
