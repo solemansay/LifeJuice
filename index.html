@@ -2,75 +2,63 @@
 <html>
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Life Juice!</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-  <link rel="stylesheet" href="assets/style.css">
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life Juice!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-  <nav class="navbar is-primary mb-6" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <img src="assets/lifeJuiceLogo.png" class="pt-3 pl-3 pb-3" alt="life juice logo" width="112" height="200">
-    </div>
-  </nav>
-
-
+    <nav class="navbar is-primary mb-6" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <img src="assets/lifeJuiceLogo.png" class="pt-3 pl-3 pb-3" alt="life juice logo" width="112" height="200">
+        </div>
+    </nav>
     <div class="container mb-5">
-      <section class="section">
-        <div>
-          <p class="subtitle">
-            Life Juice is your daily dose of<strong> internet joy!</strong>
+        <section class="section">
+            <div>
+                <p class="subtitle">
+                    Life Juice is your daily dose of<strong> internet joy!</strong>
+                    <br>
+                </p>
+                <div class="notification has-background-grey-dark has-text-primary-light" style="padding:40px">
+                    <p class="title is-5">Ready to get started? Hit the buttons below or take a random
+                        <button id="sip" class="button has-background-info-dark has-text-primary-light">Sip</button>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="startScreen pl-5 pr-6 pb-5">
+            <button id="smile"
+                class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">Smile</button>
             <br>
-          </p>
-          <div class="notification has-background-grey-dark has-text-primary-light" style="padding:40px">
-            <p class="title is-5">Ready to get started? Hit the buttons below or take a random
-              <button id="sip" class="button has-background-info-dark has-text-primary-light">Sip</button>
-            </p>
-          </div>
+            <div class="smile1 columns is-hidden" style="margin-left:5px">
+                <button id="jokes" class="button is-medium is-rounded has-background-link-dark has-text-primary-light"
+                    style="width:49%">Jokes?</button>
+                <button id="gifs" class="button is-medium is-rounded has-background-link-dark has-text-primary-light"
+                    style="width:49%">Gifs?</button>
+            </div>
+            <button id="quote"
+                class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">Quote</button>
+            <br>
+            <button id="fact"
+                class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">Fact</button>
         </div>
-      </section>
-      <div class="startScreen pl-5 pr-6 pb-5">
-
-        <button id="smile"
-          class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">Smile</button>
-        <br>
-
-        <div class="smile1 columns is-hidden" style="margin-left:5px">
-          <button id="jokes" class="button is-medium is-rounded has-background-link-dark has-text-primary-light"
-            style="width:49%">Jokes?</button>
-          <button id="gifs" class="button is-medium is-rounded has-background-link-dark has-text-primary-light"
-            style="width:49%">Gifs?</button>
-        </div>
-
-        <button id="quote"
-          class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">Quote</button>
-        <br>
-        <button id="fact" class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">Fact</button>
-      </div>
-
     </div>
-
     <div id="results" class="resultsBox">
-
     </div>
-
-  <footer class="footer pb-2 pt-2">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Life Juice</strong> by <a href="https://github.com/solemansay/LifeJuice">team 6.</a>
-        <br> Copyright &#169; 2020
-      </p>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="assets/script.js"></script>
+    <footer class="footer pb-2 pt-2">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Life Juice</strong> by <a href="https://github.com/solemansay/LifeJuice">team 6.</a>
+                <br> Copyright &#169; 2020
+            </p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>

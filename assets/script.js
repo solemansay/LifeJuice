@@ -10,14 +10,12 @@ $("#jokes").on("click", function (event) { //#jokes
         method: "GET"
     }).then(function (response) {
         var newDiv = $("<div>");
-        var saveBtn = $("<button>").text("Save").attr("save");
+        //var saveBtn = $("<button>").text("Save").attr("save");
         var jokeSetup = response[0].setup;
         var jokePunch = response[0].punchline; 
 
-        newDiv.text(jokeSetup + " " + jokePunch).saveBtn
-
+        newDiv.text(jokeSetup + " " + jokePunch)
         $("#results").append(newDiv);
-
 
         console.log(response)
         console.log("Setup: " + response[0].setup);
@@ -29,13 +27,19 @@ $("#gifs").on("click", function (event) { //#gifs
     event.preventDefault();
     var gifURL = "https://api.giphy.com/v1/gifs/random?"
     var gifapi_key = "api_key=1sI8qnYSYJT3bcAJldPmGbL6gO1XMuOV"
-    var gifSearchParameters = "&tag=laughing&rating=pg" //Need a laugh? Potentially update HTML
+    var gifSearchParameters = "&tag=laughing&rating=pg&SameSite=Secure" //Need a laugh? Potentially update HTML
     $.ajax({
         url: gifURL + gifapi_key + gifSearchParameters,
         method: "GET"
     }).then(function (response) {
+        var newImg = $("<img>");
+        var gif = response.data.images.original.url
+        
+       newImg.attr("src", gif);
+        $("#results").append(newImg);
+
         console.log(response);
-        console.log(response.data.embed_url); 
+      //  console.log(gif); 
     })
 })
 $("#quote").on("click", function (event) {
