@@ -66,3 +66,22 @@ $("#fact").on("click", function (event) { //advice
     })
 })
 
+$("#close").on("click", function (event) {
+    //$("#modal").removeAttr("class");
+    $("#gifModal").removeAttr("class");
+    $("#gifModal").attr("class", "modal")
+})
+
+$("#closeJoke").on("click", function (event) {
+    //$("#modal").removeAttr("class");
+    $("#jokeModal").removeAttr("class");
+    $("#jokeModal").attr("class", "modal");
+})
+
+$("#closeQuoteAdvice").on("click", function (event) {
+    //$("#modal").removeAttr("class");
+    $("#quoteAdviceModal").removeAttr("class");
+    $("#quoteAdviceModal").attr("class", "modal");
+})
+
+
