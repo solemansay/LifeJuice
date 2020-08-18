@@ -7,13 +7,17 @@ function jokes() {
         url: jokeURL,
         method: "GET"
     }).then(function (response) {
-        var newDiv = $("<div>");
+        $("#jokeModal").attr("class","modal is-active");
+        //var newDiv = $("<div>");
         //var saveBtn = $("<button>").text("Save").attr("save");
+
         var jokeSetup = response[0].setup;
         var jokePunch = response[0].punchline;
 
-        newDiv.text(jokeSetup + " " + jokePunch)
-        $("#results").append(newDiv);
+        //newDiv.text(jokeSetup + " " + jokePunch)
+        //$("#results").append(newDiv);
+        $("#jokeSetup").text(jokeSetup)
+        $("#jokePunchline").text(jokePunch)
 
         console.log(response)
         console.log("Setup: " + response[0].setup);
@@ -29,11 +33,13 @@ function gifs() {
         url: gifURL + gifapi_key + gifSearchParameters,
         method: "GET"
     }).then(function (response) {
-        var newImg = $("<img>");
+        //var newImg = $("<img>");
         var gif = response.data.images.original.url
+        $("#gifModal").attr("class","modal is-active");
+        $("#displayGIF").attr("src", gif);
 
-        newImg.attr("src", gif);
-        $("#results").append(newImg);
+        //newImg.attr("src", gif);
+        //$("#results").append(newImg);
 
         console.log(response);
         //  console.log(gif); 
