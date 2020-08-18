@@ -13,14 +13,64 @@ footer{
 }
 
 #smile {
+    color:whitesmoke;
     background-color: #e0cf0e;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #quote {
     background-color: #14b57a;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #fact {
     background-color: #5219bd;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.lifenav {
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.lifenav::first-letter {
+    color: orangered;
+}
+
+.second {
+    color: red;
+}
+
+.third {
+    color: orchid;
+}
+
+.fourth {
+    color: yellow;
+}
+
+.fifth {
+    color: #0c90e8;
+}
+
+.sixth {
+    color: #38e80c;
+}
+
+.seventh {
+    color: #970ce8;
+}
+
+.eighth {
+    color: #53782f;
+}
+
+.ninth {
+    color: #e8900c;
+}
