@@ -47,15 +47,23 @@ function gifs() {
 }
 function quotes() {
     event.preventDefault();
-    var quotesURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"
+    //var quotesURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"
+    var quotesURL = "https://quote-garden.herokuapp.com/api/v2/quotes/random"
     $.ajax({
         url: quotesURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
+
+        var author = response.quote.quoteAuthor;
+        var text = response.quote.quoteText;
+
+        $("#quoteAdviceModal").attr("class","modal is-active");
+        $("#quoteOrAdvice").text(text + " - " + author);
+        //response = response[0].content.rendered;
         //response = JSON.parse(response);
-        console.log(response[0].content.rendered);
-        $("#results").append(response[0].content.rendered)
+        //quoteResponse = JSON.stringify(quoteResponse)
+        //console.log(response[0].content.rendered);
+       
     })
 }
 function facts() {
@@ -67,9 +75,13 @@ function facts() {
     }).then(function (response) {
         console.log(response);
         response = JSON.parse(response)
-        console.log(response.slip.advice);
-        var newDiv = $(`<div>${response.slip.advice}</div>`)
-        $("#results").append(newDiv)
+        $("#quoteAdviceModal").attr("class","modal is-active");
+        $("#quoteOrAdvice").text(response.slip.advice);
+        
+        //console.log(response.slip.advice);
+        //$("#quoteOrAdvice").text(response)
+        //var newDiv = $(`<div>${response.slip.advice}</div>`)
+        //$("#results").append(newDiv)
     })
 }
 
