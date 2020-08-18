@@ -4,6 +4,14 @@
     background-size: cover;
 }
 
+body {
+    background-image:url("orange-background.png");
+}
+
+footer{
+    background-color: aqua;
+}
+
 #smile {
     background-color: #e0cf0e;
 }
