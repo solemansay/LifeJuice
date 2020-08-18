@@ -13,7 +13,7 @@ function jokes() {
         var jokePunch = response[0].punchline;
 
         newDiv.text(jokeSetup + " " + jokePunch)
-        $("#results").append(newDiv);
+        $("#jokeModal").append(newDiv);
 
         console.log(response)
         console.log("Setup: " + response[0].setup);
@@ -77,7 +77,7 @@ $("#smile").on("click", function () {
     $(".smile1").attr("class", "columns is-block !important");
 })
 $("#jokes").on("click", function (event) { //#jokes
-    jokes();
+    jokes()
 })
 $("#gifs").on("click", function (event) { //#gifs
     gifs()
