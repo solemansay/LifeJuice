@@ -39,7 +39,7 @@ $("#quote").on("click", function (event) {
     })
 })
 
-$("#fact").on("click", function (event) {
+$("#fact").on("click", function (event) { //advice
     event.preventDefault();
     var quotesURL = "https://api.adviceslip.com/advice"
     $.ajax({
