@@ -38,3 +38,17 @@ $("#quote").on("click", function (event) {
         console.log(response);
     })
 })
+
+$("#fact").on("click", function (event) {
+    event.preventDefault();
+    var quotesURL = "https://api.adviceslip.com/advice"
+    $.ajax({
+        url: quotesURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        response = JSON.parse(response)
+        console.log(response.slip.advice);
+    })
+})
+
