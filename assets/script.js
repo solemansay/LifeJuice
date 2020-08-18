@@ -9,9 +9,19 @@ $("#jokes").on("click", function (event) { //#jokes
         url: jokeURL,
         method: "GET"
     }).then(function (response) {
+        var newDiv = $("<div>");
+        var saveBtn = $("<button>").text("Save").attr("save");
+        var jokeSetup = response[0].setup;
+        var jokePunch = response[0].punchline; 
+
+        newDiv.text(jokeSetup + " " + jokePunch).saveBtn
+
+        $("#results").append(newDiv);
+
+
         console.log(response)
-        console.log(response[0].setup);
-        console.log(response[0].punchline);
+        console.log("Setup: " + response[0].setup);
+        console.log("Punchline: " + response[0].punchline);
     })
 })
 $("#gifs").on("click", function (event) { //#gifs
