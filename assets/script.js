@@ -1,8 +1,6 @@
-$("#smile").on("click", function () {
-    $(".smile1").attr("class", "columns is-block !important");
-})
+var sippyArray = [jokes, gifs, quotes, facts]
 
-$("#jokes").on("click", function (event) { //#jokes
+function jokes() {
     event.preventDefault();
     var jokeURL = "https://official-joke-api.appspot.com/jokes/general/random";
     $.ajax({
@@ -12,7 +10,7 @@ $("#jokes").on("click", function (event) { //#jokes
         var newDiv = $("<div>");
         //var saveBtn = $("<button>").text("Save").attr("save");
         var jokeSetup = response[0].setup;
-        var jokePunch = response[0].punchline; 
+        var jokePunch = response[0].punchline;
 
         newDiv.text(jokeSetup + " " + jokePunch)
         $("#results").append(newDiv);
@@ -21,9 +19,8 @@ $("#jokes").on("click", function (event) { //#jokes
         console.log("Setup: " + response[0].setup);
         console.log("Punchline: " + response[0].punchline);
     })
-})
-$("#gifs").on("click", function (event) { //#gifs
-
+}
+function gifs() {
     event.preventDefault();
     var gifURL = "https://api.giphy.com/v1/gifs/random?"
     var gifapi_key = "api_key=1sI8qnYSYJT3bcAJldPmGbL6gO1XMuOV"
@@ -34,15 +31,15 @@ $("#gifs").on("click", function (event) { //#gifs
     }).then(function (response) {
         var newImg = $("<img>");
         var gif = response.data.images.original.url
-        
-       newImg.attr("src", gif);
+
+        newImg.attr("src", gif);
         $("#results").append(newImg);
 
         console.log(response);
-      //  console.log(gif); 
+        //  console.log(gif); 
     })
-})
-$("#quote").on("click", function (event) {
+}
+function quotes() {
     event.preventDefault();
     var quotesURL = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"
     $.ajax({
@@ -50,20 +47,46 @@ $("#quote").on("click", function (event) {
         method: "GET"
     }).then(function (response) {
         console.log(response);
+        //response = JSON.parse(response);
+        console.log(response[0].content.rendered);
+        $("#results").append(response[0].content.rendered)
     })
-})
-
-$("#fact").on("click", function (event) { //advice
+}
+function facts() {
     event.preventDefault();
-    var quotesURL = "https://api.adviceslip.com/advice"
+    var factsURL = "https://api.adviceslip.com/advice"
     $.ajax({
-        url: quotesURL,
+        url: factsURL,
         method: "GET"
     }).then(function (response) {
         console.log(response);
         response = JSON.parse(response)
         console.log(response.slip.advice);
+        var newDiv = $(`<div>${response.slip.advice}</div>`)
+        $("#results").append(newDiv)
     })
+}
+
+$("#sip").on("click", function (event) {
+    event.preventDefault()
+    var sippy = Math.floor(Math.random() * 4)
+    console.log(sippy);
+    sippyArray[sippy]()
+})
+$("#smile").on("click", function () {
+    $(".smile1").attr("class", "columns is-block !important");
+})
+$("#jokes").on("click", function (event) { //#jokes
+    jokes();
+})
+$("#gifs").on("click", function (event) { //#gifs
+    gifs()
+})
+$("#quote").on("click", function (event) {
+    quotes()
+})
+$("#fact").on("click", function (event) { //advice
+    facts()
 })
 
 $("#close").on("click", function (event) {
