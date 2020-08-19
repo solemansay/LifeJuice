@@ -29,7 +29,7 @@ footer{
 }
 
 .lifenav {
-    font-size: 100px;
+    font-size: 8em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -67,4 +67,18 @@ footer{
 
 .ninth {
     color: #e8900c;
+}
+
+#main-nav{
+    margin: 0 auto;
+}
+
+#heart-logo {
+    min-height: 200px;
+    
+    
+}
+
+#juice-logo {
+    min-height: 100px;
 }
