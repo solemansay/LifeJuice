@@ -14,8 +14,13 @@ body {
     background-size: cover;
 }
 
+.modal-card-foot{
+    background-color: rgb(245, 173, 79) ;
+    border: solid rgb(199, 212, 18) 5px;
+}
+
 .modal-card-head{
-    background-color: rgb(42, 44, 173) ;
+    background-color: rgb(65, 67, 201) ;
     border: solid rgb(199, 212, 18) 5px;
 }
 
@@ -30,7 +35,7 @@ body {
 
 #smile {
     color:whitesmoke;
-    background-color: #e0cf0e;
+    background-color: #eba91b;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -90,11 +95,16 @@ body {
 }
 
 #heart-logo {
-    min-height: 200px;
-
+    min-height: 100px;
+    
     
 }
 
 #juice-logo {
     min-height: 100px;
+}
+
+.notification {
+    background-image: url(juicecolor.jpg);
+    background-size: cover;
 }
