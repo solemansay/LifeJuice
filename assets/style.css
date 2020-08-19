@@ -74,11 +74,16 @@ footer{
 }
 
 #heart-logo {
-    min-height: 200px;
+    min-height: 100px;
     
     
 }
 
 #juice-logo {
     min-height: 100px;
+}
+
+.notification {
+    background-image: url(juicecolor.jpg);
+    background-size: cover;
 }
