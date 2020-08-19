@@ -23,6 +23,7 @@ function jokes() {
         console.log("Setup: " + response[0].setup);
         console.log("Punchline: " + response[0].punchline);
     })
+
 }
 function gifs() {
     var gifURL = "https://api.giphy.com/v1/gifs/random?"
@@ -42,6 +43,7 @@ function gifs() {
 
         console.log(response);
         //  console.log(gif); 
+        
     })
 }
 function quotes() {
@@ -92,8 +94,17 @@ function masterTimer(jokePunch) {
             $("#jokeModal").attr("class", "modal");
             gifs()
         }, 4000)
-    }, 3000)
+    }, 3000)$
+    ("#jokePunchLine").empty()
 }
+
+function jEE() {
+    
+}
+
+$("#jeff").on("click", function(event) {
+    jEE()
+})
 
 $("#sip").on("click", function (event) {
     event.preventDefault()
