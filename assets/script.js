@@ -94,12 +94,11 @@ function masterTimer(jokePunch) {
             $("#jokeModal").attr("class", "modal");
             gifs()
         }, 4000)
-    }, 3000)$
-    ("#jokePunchLine").empty()
+    }, 3000)
 }
 
 function jEE() {
-    
+
 }
 
 $("#jeff").on("click", function(event) {
