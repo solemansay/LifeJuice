@@ -8,8 +8,24 @@ body {
     background-image:url("orange-background.png");
 }
 
-footer{
-    background-color: aqua;
+.modal{
+    background-image: url('footerImage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal-card-head{
+    background-color: rgb(42, 44, 173) ;
+    border: solid rgb(199, 212, 18) 5px;
+}
+
+.modal-card-body{
+    background-color: rgb(220, 220, 224) ;
+    margin-left: 17px;
+}
+
+.footer{
+    background-color: rgb(228, 32, 114);
 }
 
 #smile {
@@ -54,7 +70,7 @@ footer{
 }
 
 .sixth {
-    color: #38e80c;
+    color: #49c22a;
 }
 
 .seventh {
@@ -75,7 +91,7 @@ footer{
 
 #heart-logo {
     min-height: 200px;
-    
+
     
 }
 
