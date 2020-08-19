@@ -1,4 +1,4 @@
-var sippyArray = [jokes, gifs, quotes, facts]
+var sippyArray = [jokes, quotes, facts]
 
 function jokes() {
     event.preventDefault();
@@ -17,15 +17,14 @@ function jokes() {
         //newDiv.text(jokeSetup + " " + jokePunch)
         //$("#results").append(newDiv);
         $("#jokeSetup").text(jokeSetup)
-        $("#jokePunchline").text(jokePunch)
-
+//        $("#jokePunchline").text(jokePunch)
+        masterTimer(jokePunch)
         console.log(response)
         console.log("Setup: " + response[0].setup);
         console.log("Punchline: " + response[0].punchline);
     })
 }
 function gifs() {
-    event.preventDefault();
     var gifURL = "https://api.giphy.com/v1/gifs/random?"
     var gifapi_key = "api_key=1sI8qnYSYJT3bcAJldPmGbL6gO1XMuOV"
     var gifSearchParameters = "&tag=laughing&rating=pg&SameSite=Secure" //Need a laugh? Potentially update HTML
@@ -84,19 +83,31 @@ function facts() {
         //$("#results").append(newDiv)
     })
 }
+function masterTimer(jokePunch) {
+    setTimeout(function() {
+        $("#jokePunchline").text(jokePunch)
+        setTimeout(function(){
+            console.log("here")
+            $("#jokeModal").removeAttr("class");
+            $("#jokeModal").attr("class", "modal");
+            gifs()
+        }, 4000)
+    }, 3000)
+}
 
 $("#sip").on("click", function (event) {
     event.preventDefault()
-    var sippy = Math.floor(Math.random() * 4)
+    var sippy = Math.floor(Math.random() * 3)
     console.log(sippy);
     sippyArray[sippy]()
 })
-$("#smile").on("click", function () {
-    $(".smile1").attr("class", "columns is-block !important");
-})
-$("#jokes").on("click", function (event) { //#jokes
+$("#smile").on("click", function (event) {
+    // $(".smile1").attr("class", "columns is-block !important");
     jokes()
 })
+// $("#jokes").on("click", function (event) { //#jokes
+//     jokes()
+// })
 $("#gifs").on("click", function (event) { //#gifs
     gifs()
 })
