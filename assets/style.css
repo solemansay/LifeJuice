@@ -12,6 +12,16 @@ footer{
     background-color: aqua;
 }
 
+.shpiel {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: 20px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
 #smile {
     color:whitesmoke;
     background-color: #e0cf0e;
@@ -32,11 +42,11 @@ footer{
     font-size: 100px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(100%, -50%)
 }
 
 .lifenav::first-letter {
