@@ -1,4 +1,4 @@
-var sippyArray = [jokes, gifs, quotes, facts]
+var sippyArray = [jokes, quotes, facts]
 
 function jokes() {
     event.preventDefault();
@@ -13,11 +13,15 @@ function jokes() {
         var jokePunch = response[0].punchline;
 
         $("#jokeSetup").text(jokeSetup)
-        $("#jokePunchline").text(jokePunch)
+//        $("#jokePunchline").text(jokePunch)
+        masterTimer(jokePunch)
+        console.log(response)
+        console.log("Setup: " + response[0].setup);
+        console.log("Punchline: " + response[0].punchline);
     })
+
 }
 function gifs() {
-    event.preventDefault();
     var gifURL = "https://api.giphy.com/v1/gifs/random?"
     var gifapi_key = "api_key=1sI8qnYSYJT3bcAJldPmGbL6gO1XMuOV"
     var gifSearchParameters = "&tag=laughing&rating=pg&SameSite=Secure"
@@ -30,6 +34,11 @@ function gifs() {
         $("#gifModal").attr("class","modal is-active");
         $("#displayGIF").attr("src", gif);
 
+        //newImg.attr("src", gif);
+        //$("#results").append(newImg);
+
+        console.log(response);
+        //  console.log(gif); 
         
     })
 }
@@ -62,20 +71,40 @@ function facts() {
         $("#advice").text(response.slip.advice);
     })
 }
+function masterTimer(jokePunch) {
+    setTimeout(function() {
+        $("#jokePunchline").text(jokePunch)
+        setTimeout(function(){
+            console.log("here")
+            $("#jokeModal").removeAttr("class");
+            $("#jokeModal").attr("class", "modal");
+            gifs()
+        }, 4000)
+    }, 3000)
+}
+
+function jEE() {
+
+}
+
+$("#jeff").on("click", function(event) {
+    jEE()
+})
 
 $("#sip").on("click", function (event) {
     event.preventDefault()
-    var sippy = Math.floor(Math.random() * 4)
+    var sippy = Math.floor(Math.random() * 3)
     console.log(sippy);
     sippyArray[sippy]()
 })
-$("#smile").on("click", function () {
-    $(".smile1").attr("class", "columns is-block !important");
-})
-$("#jokes").on("click", function (event) {
+$("#smile").on("click", function (event) {
+    // $(".smile1").attr("class", "columns is-block !important");
     jokes()
 })
-$("#gifs").on("click", function (event) {
+// $("#jokes").on("click", function (event) { //#jokes
+//     jokes()
+// })
+$("#gifs").on("click", function (event) { //#gifs
     gifs()
 })
 $("#quote").on("click", function (event) {
