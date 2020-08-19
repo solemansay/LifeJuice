@@ -95,7 +95,7 @@ $("#smile").on("click", function () {
     $(".smile1").attr("class", "columns is-block !important");
 })
 $("#jokes").on("click", function (event) { //#jokes
-    jokes();
+    jokes()
 })
 $("#gifs").on("click", function (event) { //#gifs
     gifs()
