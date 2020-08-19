@@ -106,13 +106,11 @@ $("#closeJoke").on("click", function (event) {
     $("#jokeModal").removeAttr("class");
     $("#jokeModal").attr("class", "modal");
 })
-$("#closeQuoteAdvice").on("click", function (event) {
-    $("#quoteAdviceModal").removeAttr("class");
-    $("#quoteAdviceModal").attr("class", "modal");
+$("#closeAdvice").on("click", function (event) {
+    $("#adviceModal").removeAttr("class");
+    $("#adviceModal").attr("class", "modal");
 })
-
 $("#closeQuote").on("click", function (event) {
-    
     $("#quoteModal").removeAttr("class");
     $("#quoteModal").attr("class", "modal");
 })
