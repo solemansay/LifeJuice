@@ -1,5 +1,32 @@
 var sippyArray = [jokes, quotes, facts]
 
+var answerArrofObj = [
+    {
+        quote: "It's like Mary Poppins.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Go home and sharpen your axe, don't beat at a tree for hours with a dull axe.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "When you go home today after class.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Computers are, DUMB!",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Oops, it opened in the wrong browser.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: ".",
+        quoteAuthor: ["-Jeff"],
+    },
+]
+
 function jokes() {
     event.preventDefault();
     var jokeURL = "https://official-joke-api.appspot.com/jokes/general/random";
@@ -7,7 +34,7 @@ function jokes() {
         url: jokeURL,
         method: "GET"
     }).then(function (response) {
-        $("#jokeModal").attr("class","modal is-active");
+        $("#jokeModal").attr("class", "modal is-active");
         var jokeSetup = response[0].setup;
         var jokePunch = response[0].punchline;
 
@@ -27,12 +54,13 @@ function gifs() {
         method: "GET"
     }).then(function (response) {
         var gif = response.data.images.original.url
-        $("#gifModal").attr("class","modal is-active");
+        $("#gifModal").attr("class", "modal is-active");
         $("#displayGIF").attr("src", gif);
     })
 }
 function quotes() {
     event.preventDefault();
+
     var quotesURL = "https://quote-garden.herokuapp.com/api/v2/quotes/random"
     $.ajax({
         url: quotesURL,
@@ -41,9 +69,9 @@ function quotes() {
 
         var author = response.quote.quoteAuthor;
         var text = response.quote.quoteText;
-
-        $("#quoteAdviceModal").attr("class","modal is-active");
-        $("#quoteOrAdvice").text(text + " - " + author);
+        $("#quoteModal").attr("class", "modal is-active");
+        $("#quoteText").text(text);
+        $("#author").text(" - " + author);
     })
 }
 function facts() {
@@ -55,29 +83,29 @@ function facts() {
     }).then(function (response) {
         console.log(response);
         response = JSON.parse(response)
-        $("#quoteAdviceModal").attr("class","modal is-active");
-        $("#quoteOrAdvice").text(response.slip.advice);
+        $("#adviceModal").attr("class", "modal is-active");
+        $("#advice").text(response.slip.advice);
     })
 }
 function masterTimer(jokePunch) {
-    setTimeout(function() {
+    setTimeout(function () {
         $("#jokePunchline").text(jokePunch)
-        setTimeout(function(){
+        setTimeout(function () {
             console.log("here")
             $("#jokeModal").removeAttr("class");
             $("#jokeModal").attr("class", "modal");
             $("#jokePunchline").empty()
 
             gifs()
-        }, 4000)
-    }, 3000)
+        }, 3500)
+    }, 2700)
 }
 
 function jEE() {
 
 }
 
-$("#jeff").on("click", function(event) {
+$("#jeff").on("click", function (event) {
     jEE()
 })
 
@@ -92,16 +120,12 @@ $("#smile").on("click", function (event) {
 $("#quote").on("click", function (event) {
     quotes()
 })
-$("#fact").on("click", function (event) { 
+$("#fact").on("click", function (event) {
     facts()
 })
 $("#close").on("click", function (event) {
     $("#gifModal").removeAttr("class");
     $("#gifModal").attr("class", "modal")
-})
-$("#closeJoke").on("click", function (event) {
-    $("#jokeModal").removeAttr("class");
-    $("#jokeModal").attr("class", "modal");
 })
 $("#closeAdvice").on("click", function (event) {
     $("#adviceModal").removeAttr("class");
