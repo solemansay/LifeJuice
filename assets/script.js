@@ -1,6 +1,5 @@
-var sippyArray = [jokes, quotes, facts]
-
-var answerArrofObj = [
+var sippyArray = [jokes, quotes, advice];
+var jeffQuoteObjArr = [
     {
         quote: "It's like Mary Poppins.",
         quoteAuthor: ["-Jeff"],
@@ -22,10 +21,10 @@ var answerArrofObj = [
         quoteAuthor: ["-Jeff"],
     },
     {
-        quote: ".",
+        quote: "There's no such thing as a stupid question.",
         quoteAuthor: ["-Jeff"],
     },
-]
+];
 
 function jokes() {
     event.preventDefault();
@@ -70,15 +69,15 @@ function quotes() {
         var author = response.quote.quoteAuthor;
         var text = response.quote.quoteText;
         $("#quoteModal").attr("class", "modal is-active");
-        $("#quoteText").text(text);
+        $("#quoteText").text('"' + text + '"');
         $("#author").text(" - " + author);
     })
 }
-function facts() {
+function advice() {
     event.preventDefault();
-    var factsURL = "https://api.adviceslip.com/advice"
+    var adviceURL = "https://api.adviceslip.com/advice"
     $.ajax({
-        url: factsURL,
+        url: adviceURL,
         method: "GET"
     }).then(function (response) {
         console.log(response);
@@ -102,7 +101,15 @@ function masterTimer(jokePunch) {
 }
 
 function jEE() {
+    event.preventDefault();
+    var jeffquote = Math.floor(Math.random() * jeffQuoteObjArr.length)
 
+    var author = jeffQuoteObjArr[jeffquote].quoteAuthor;
+    var text = jeffQuoteObjArr[jeffquote].quote;
+
+    $("#jeffModal").attr("class", "modal is-active");
+    $("#jeffQuoteText").text('"' + text + '"');
+    $("#Author").text(author);
 }
 
 $("#jeff").on("click", function (event) {
@@ -121,7 +128,7 @@ $("#quote").on("click", function (event) {
     quotes()
 })
 $("#fact").on("click", function (event) {
-    facts()
+    advice()
 })
 $("#close").on("click", function (event) {
     $("#gifModal").removeAttr("class");
@@ -134,4 +141,8 @@ $("#closeAdvice").on("click", function (event) {
 $("#closeQuote").on("click", function (event) {
     $("#quoteModal").removeAttr("class");
     $("#quoteModal").attr("class", "modal");
+})
+$("#closeJeffQuote").on("click", function (event) {
+    $("#jeffModal").removeAttr("class");
+    $("#jeffModal").attr("class", "modal");
 })

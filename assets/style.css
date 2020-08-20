@@ -14,6 +14,11 @@ body {
     background-size: cover;
 }
 
+#jeffModal{
+    background-image: url('jeffQuote.png');
+    background-repeat: repeat;
+}
+
 .modal-card-foot{
     background-color: rgb(245, 173, 79) ;
     border: solid rgb(199, 212, 18) 5px;
