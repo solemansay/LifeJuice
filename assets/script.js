@@ -5,7 +5,7 @@ var jeffQuoteObjArr = [
         quoteAuthor: ["-Jeff"],
     },
     {
-        quote: "Go home and sharpen your axe, don't beat at a tree for hours with a dull axe.",
+        quote: "Go home and sharpen your axe, don't beat at a tree for hours with a dull blade.",
         quoteAuthor: ["-Jeff"],
     },
     {
@@ -38,6 +38,26 @@ var jeffQuoteObjArr = [
     },
     {
         quote: "If coding was easy, it would be a minimum wage job.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Just get good.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Oh, I'm not sharing my screen.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Sorry for the background noise, thats my espresso maker..",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "I know this is hard, but it will get a thousand times easier.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Google-fu, EVERY-THING.",
         quoteAuthor: ["-Jeff"],
     },
 ];
@@ -128,37 +148,36 @@ function jEE() {
     $("#Author").text(author);
 }
 
-$("#jeff").on("click", function (event) {
+$("#jeff").on("click", function () {
     jEE()
 })
 
-$("#sip").on("click", function (event) {
-    event.preventDefault()
+$("#sip").on("click", function () {
     var sippy = Math.floor(Math.random() * 3)
     sippyArray[sippy]()
 })
-$("#smile").on("click", function (event) {
+$("#smile").on("click", function () {
     jokes()
 })
-$("#quote").on("click", function (event) {
+$("#quote").on("click", function () {
     quotes()
 })
-$("#fact").on("click", function (event) {
+$("#fact").on("click", function () {
     advice()
 })
-$("#close").on("click", function (event) {
+$("#close").on("click", function () {
     $("#gifModal").removeAttr("class");
     $("#gifModal").attr("class", "modal")
 })
-$("#closeAdvice").on("click", function (event) {
+$("#closeAdvice").on("click", function () {
     $("#adviceModal").removeAttr("class");
     $("#adviceModal").attr("class", "modal");
 })
-$("#closeQuote").on("click", function (event) {
+$("#closeQuote").on("click", function () {
     $("#quoteModal").removeAttr("class");
     $("#quoteModal").attr("class", "modal");
 })
-$("#closeJeffQuote").on("click", function (event) {
+$("#closeJeffQuote").on("click", function () {
     $("#jeffModal").removeAttr("class");
     $("#jeffModal").attr("class", "modal");
 })
