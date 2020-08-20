@@ -14,7 +14,7 @@
 <body>
   <nav class="navbar is-primary mb-6" role="navigation" aria-label="main navigation">
     <div id="main-nav" class="navbar-item">
-      <img src="assets/HeartLogo.png" alt="life juice heart logo" id="heart-logo">
+      <img src="assets/heartLogo.png" alt="life juice heart logo" id="heart-logo">
       <h1 class="lifenav">
         L<span class="second">i</span><span class="third">f</span><span class="fourth">e</span><span> </span>
         <a class="fifth" id ="jeff">J</a><span class="sixth">u</span><span class="seventh">i</span><span class="eighth">c</span><span class="ninth">e</span>
@@ -31,17 +31,17 @@
           <br>
         </p>
         <div class="notification has-text-centered has-text-primary-light pb-5">
-          <p class="title is-5">Ready to get started? Hit the buttons below or take a random sip! <a id="sip"><img src="assets/lifeJuiceLogo.png" alt="life juice logo" width="50"></a>
+          <p class="title is-5">Ready to get started? Click any button below or take a random sip! -> <a id="sip"><img src="assets/lifeJuiceLogo.png" alt="life juice logo" width="50"></a>
           </p>
         </div>
       </div>
     </section>
     <div class="startScreen pl-5 pr-6 pb-5">
-      <button id="smile" class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">Need a laugh?</button>
+      <button id="smile" class="button is-large is-fullwidth is-center is-rounded has-text-primary-light"></button>
       <br>
-      <button id="quote" class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">Want a quote?</button>
+      <button id="quote" class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">"To squeeze.. or not to squeeze"</button>
       <br>
-      <button id="fact" class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">How about some advice?</button>
+      <button id="fact" class="button is-large is-fullwidth is-center is-rounded has-text-primary-light">When life gets sour</button>
     </div>
 
   </div>
@@ -49,29 +49,27 @@
   <footer class="footer pb-2 pt-2">
     <div class="content has-text-centered">
       <p>
-        <strong>Life Juice</strong> by <a href="https://github.com/solemansay/LifeJuice"> Code Team 6.</a>
+        <strong>Life Juice</strong> by <a href="https://github.com/solemansay/LifeJuice"> <strong>Code Team 6.</strong></a>
         <br> Copyright &#169; 2020
       </p>
     </div>
   </footer>
 
   
-  <div id = "gifModal" class="modal" style = "background-color: green">
+  <div id = "gifModal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-content">
       <img id = "displayGIF">
-      <!--<img src="https://bulma.io/images/placeholders/1280x960.png" alt=""> -->
     </div>
     <button id ="close" class="modal-close is-large" aria-label="close"></button>
   </div>
 
 
-  <div id ="jokeModal" class="modal" style = "background-color: green">
+  <div id ="jokeModal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <section id = "jokeSetup" class="modal-card-body"></section>
-        <button id = "closeJoke" class="delete" aria-label="close"></button>
+        <strong><section id = "jokeSetup" class="modal-card-body"></section></strong>
       </header>
       <footer class="modal-card-foot">
         <section id = "jokePunchline" class="modal-card-body">
@@ -81,7 +79,7 @@
   </div>
 
   
-  <div id ="quoteModal" class="modal" style = "background-color: green">
+  <div id ="quoteModal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
@@ -92,8 +90,20 @@
         </header>
       </div>
     </div>
+
+    <div id ="jeffModal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <section  class="modal-card-body"><span id ="jeffQuoteText" ></span>
+            <br>
+            <span><i id ="Author"></i></span></section>
+            <button id = "closeJeffQuote" class="delete" aria-label="close"></button>
+          </header>
+        </div>
+      </div>
     
-    <div id ="adviceModal" class="modal" style = "background-color: green">
+    <div id ="adviceModal" class="modal">
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
