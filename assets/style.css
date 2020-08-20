@@ -4,6 +4,10 @@
     background-size: cover;
 }
 
+
+a { color: inherit; }
+
+
 body {
     background-image:url("orange-background.png");
 }
