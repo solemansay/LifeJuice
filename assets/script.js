@@ -8,11 +8,7 @@ function jokes() {
         method: "GET"
     }).then(function (response) {
         $("#jokeModal").attr("class","modal is-active");
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 6a9fef5df6f35143885cea6e35f8d480c98d3c9b
         var jokeSetup = response[0].setup;
         var jokePunch = response[0].punchline;
 
