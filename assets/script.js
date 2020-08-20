@@ -9,7 +9,7 @@ var jeffQuoteObjArr = [
         quoteAuthor: ["-Jeff"],
     },
     {
-        quote: "When you go home today after class.",
+        quote: "When you go home today after class...",
         quoteAuthor: ["-Jeff"],
     },
     {
@@ -22,6 +22,22 @@ var jeffQuoteObjArr = [
     },
     {
         quote: "There's no such thing as a stupid question.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "It's almost Friday.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Okay class..",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "Right?",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "If coding was easy, it would be a minimum wage job.",
         quoteAuthor: ["-Jeff"],
     },
 ];
