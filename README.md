@@ -8,6 +8,8 @@ https://solemansay.github.io/LifeJuice/
 
 The goal that we were trying to achive while making Life Juice was to create a UI that when interacted with, would provide the user with joy, wisdom, or a random famous quote. The first thing that we did while drafting our idea was create a couple user stories and make a basic scetch of the site that we wanted. 
 
+<img src="assets/basicLayout.jpg">
+
 
 - AS a user I want a webpage
 
@@ -39,6 +41,11 @@ The goal that we were trying to achive while making Life Juice was to create a U
 
 - the punch line.
 
+Following this we decided where we were strong or weak and what tasks we would be taking up as our primary focus.
+
+<img src = "assets/tasks.png">
+
 
 
 <img src="assets/screenshot.png" alt="Final website">
+
