@@ -4,17 +4,47 @@
     background-size: cover;
 }
 
+
+a { color: inherit; }
+
+
 body {
     background-image:url("orange-background.png");
 }
 
-footer{
-    background-color: aqua;
+.modal{
+    background-image: url('footerImage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#jeffModal{
+    background-image: url('jeffQuote.png');
+    background-repeat: repeat;
+}
+
+.modal-card-foot{
+    background-color: rgb(245, 173, 79) ;
+    border: solid rgb(199, 212, 18) 5px;
+}
+
+.modal-card-head{
+    background-color: rgb(65, 67, 201) ;
+    border: solid rgb(199, 212, 18) 5px;
+}
+
+.modal-card-body{
+    background-color: rgb(220, 220, 224) ;
+    margin-left: 17px;
+}
+
+.footer{
+    background-color: rgb(228, 32, 114);
 }
 
 #smile {
     color:whitesmoke;
-    background-color: #e0cf0e;
+    background-color: #eba91b;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -54,7 +84,7 @@ footer{
 }
 
 .sixth {
-    color: #38e80c;
+    color: #49c22a;
 }
 
 .seventh {
@@ -74,11 +104,16 @@ footer{
 }
 
 #heart-logo {
-    min-height: 200px;
+    min-height: 100px;
     
     
 }
 
 #juice-logo {
     min-height: 100px;
+}
+
+.notification {
+    background-image: url(juicecolor.jpg);
+    background-size: cover;
 }
