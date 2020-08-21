@@ -60,6 +60,19 @@ var jeffQuoteObjArr = [
         quote: "Google-fu, EVERY-THING.",
         quoteAuthor: ["-Jeff"],
     },
+    {
+        quote: "This is a bootcamp, not happy fun time with Jeff.",
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "The juice is worth the squeeze.",
+
+        quoteAuthor: ["-Jeff"],
+    },
+    {
+        quote: "out of the sandbox terrorizing the whole playground",
+        quoteAuthor: ["-Jeff"],
+    },
 ];
 
 function jokes() {
