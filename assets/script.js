@@ -49,7 +49,7 @@ var jeffQuoteObjArr = [
         quoteAuthor: ["-Jeff"],
     },
     {
-        quote: "Sorry for the background noise, thats my espresso maker..",
+        quote: "Sorry for the background noise, that's my espresso maker..",
         quoteAuthor: ["-Jeff"],
     },
     {
@@ -70,7 +70,7 @@ var jeffQuoteObjArr = [
         quoteAuthor: ["-Jeff"],
     },
     {
-        quote: "out of the sandbox terrorizing the whole playground",
+        quote: "Out of the sandbox terrorizing the whole playground",
         quoteAuthor: ["-Jeff"],
     },
 ];
